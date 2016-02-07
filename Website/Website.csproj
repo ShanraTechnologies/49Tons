@@ -1,0 +1,376 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{074EAD26-E412-426F-AD94-90BF9CBFEFE2}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Website</RootNamespace>
+    <AssemblyName>Website</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="fonts\elegant-icons\ElegantIcons.eot" />
+    <Content Include="fonts\elegant-icons\ElegantIcons.ttf" />
+    <Content Include="fonts\elegant-icons\ElegantIcons.woff" />
+    <Content Include="fonts\font-awesome\fontawesome-webfont.eot" />
+    <Content Include="fonts\font-awesome\fontawesome-webfont.ttf" />
+    <Content Include="fonts\font-awesome\fontawesome-webfont.woff" />
+    <Content Include="fonts\font-awesome\FontAwesome.otf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\simple-line-icons\Simple-Line-Icons.eot" />
+    <Content Include="fonts\simple-line-icons\Simple-Line-Icons.ttf" />
+    <Content Include="fonts\simple-line-icons\Simple-Line-Icons.woff" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\animate.css" />
+    <Content Include="css\bigvideo.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\color.css" />
+    <Content Include="css\main.css" />
+    <Content Include="css\nivo-lightbox.css" />
+    <Content Include="css\nivo-themes\default\close%402x.png" />
+    <Content Include="css\nivo-themes\default\close.png" />
+    <Content Include="css\nivo-themes\default\default.css" />
+    <Content Include="css\nivo-themes\default\loading%402x.gif" />
+    <Content Include="css\nivo-themes\default\loading.gif" />
+    <Content Include="css\nivo-themes\default\next%402x.png" />
+    <Content Include="css\nivo-themes\default\next.png" />
+    <Content Include="css\nivo-themes\default\prev%402x.png" />
+    <Content Include="css\nivo-themes\default\prev.png" />
+    <Content Include="css\owl.carousel.css" />
+    <Content Include="css\owl.theme.css" />
+    <Content Include="css\owl.transitions.css" />
+    <Content Include="css\plugins.css" />
+    <Content Include="css\portfolio.css" />
+    <Content Include="css\preloader.css" />
+    <Content Include="css\theme.css" />
+    <Content Include="fonts\elegant-icons\elegant-icons.css" />
+    <Content Include="fonts\elegant-icons\ElegantIcons.svg" />
+    <Content Include="fonts\font-awesome\font-awesome.css" />
+    <Content Include="fonts\font-awesome\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\simple-line-icons\simple-line-icons.css" />
+    <Content Include="fonts\simple-line-icons\Simple-Line-Icons.dev.svg" />
+    <Content Include="fonts\simple-line-icons\Simple-Line-Icons.svg" />
+    <Content Include="img\app-screenshots\app-screens%402x.png" />
+    <Content Include="img\app-screenshots\app-screens.png" />
+    <Content Include="img\app-screenshots\layer-1%402x.png" />
+    <Content Include="img\app-screenshots\layer-1.png" />
+    <Content Include="img\app-screenshots\layer-2%402x.png" />
+    <Content Include="img\app-screenshots\layer-2.png" />
+    <Content Include="img\app-screenshots\layer-3%402x.png" />
+    <Content Include="img\app-screenshots\layer-3.png" />
+    <Content Include="img\app-screenshots\screenshot-1%402x.jpg" />
+    <Content Include="img\app-screenshots\screenshot-1.jpg" />
+    <Content Include="img\app-screenshots\screenshot-2%402x.jpg" />
+    <Content Include="img\app-screenshots\screenshot-2.jpg" />
+    <Content Include="img\app-screenshots\screenshot-3%402x.jpg" />
+    <Content Include="img\app-screenshots\screenshot-3.jpg" />
+    <Content Include="img\bg1.jpg" />
+    <Content Include="img\clients\client1.jpg" />
+    <Content Include="img\clients\client2.jpg" />
+    <Content Include="img\clients\client3.jpg" />
+    <Content Include="img\logo-dark%402x.png" />
+    <Content Include="img\logo-dark.png" />
+    <Content Include="img\logo-gray%402x.png" />
+    <Content Include="img\logo-gray.png" />
+    <Content Include="img\logo-light%402x.png" />
+    <Content Include="img\logo-light.png" />
+    <Content Include="img\mockups\iphone-dark.png" />
+    <Content Include="img\mockups\iphone-screen.png" />
+    <Content Include="img\mockups\iphone-white-no-shadow.png" />
+    <Content Include="img\mockups\iphone-white.png" />
+    <Content Include="img\mockups\lens%402x.png" />
+    <Content Include="img\mockups\lens.png" />
+    <Content Include="img\pattern.jpg" />
+    <Content Include="img\portfolio\loading.gif" />
+    <Content Include="img\portfolio\loading_dark.gif" />
+    <Content Include="img\portfolio\nav-icon.png" />
+    <Content Include="img\portfolio\nav.png" />
+    <Content Include="img\portfolio\project-10\img-1.jpg" />
+    <Content Include="img\portfolio\project-10\img-2.jpg" />
+    <Content Include="img\portfolio\project-10\img-3.jpg" />
+    <Content Include="img\portfolio\project-10\img-4.jpg" />
+    <Content Include="img\portfolio\project-10\img-5.jpg" />
+    <Content Include="img\portfolio\project-10\thumb-1.jpg" />
+    <Content Include="img\portfolio\project-10\thumb-2.jpg" />
+    <Content Include="img\portfolio\project-10\thumb-3.jpg" />
+    <Content Include="img\portfolio\project-10\thumb-4.jpg" />
+    <Content Include="img\portfolio\project-10\thumb-5.jpg" />
+    <Content Include="img\portfolio\project-11\img-1.jpg" />
+    <Content Include="img\portfolio\project-11\img-2.jpg" />
+    <Content Include="img\portfolio\project-11\img-3.jpg" />
+    <Content Include="img\portfolio\project-11\img-4.jpg" />
+    <Content Include="img\portfolio\project-11\img-5.jpg" />
+    <Content Include="img\portfolio\project-11\thumb-1.jpg" />
+    <Content Include="img\portfolio\project-11\thumb-2.jpg" />
+    <Content Include="img\portfolio\project-11\thumb-3.jpg" />
+    <Content Include="img\portfolio\project-11\thumb-4.jpg" />
+    <Content Include="img\portfolio\project-11\thumb-5.jpg" />
+    <Content Include="img\portfolio\project-12\img-1.jpg" />
+    <Content Include="img\portfolio\project-12\img-2.jpg" />
+    <Content Include="img\portfolio\project-12\img-3.jpg" />
+    <Content Include="img\portfolio\project-12\img-4.jpg" />
+    <Content Include="img\portfolio\project-12\img-5.jpg" />
+    <Content Include="img\portfolio\project-12\thumb-1.jpg" />
+    <Content Include="img\portfolio\project-12\thumb-2.jpg" />
+    <Content Include="img\portfolio\project-12\thumb-3.jpg" />
+    <Content Include="img\portfolio\project-12\thumb-4.jpg" />
+    <Content Include="img\portfolio\project-12\thumb-5.jpg" />
+    <Content Include="img\portfolio\project-13\img-1.jpg" />
+    <Content Include="img\portfolio\project-13\img-2.jpg" />
+    <Content Include="img\portfolio\project-13\img-3.jpg" />
+    <Content Include="img\portfolio\project-13\img-4.jpg" />
+    <Content Include="img\portfolio\project-13\img-5.jpg" />
+    <Content Include="img\portfolio\project-13\thumb-1.jpg" />
+    <Content Include="img\portfolio\project-13\thumb-2.jpg" />
+    <Content Include="img\portfolio\project-13\thumb-3.jpg" />
+    <Content Include="img\portfolio\project-13\thumb-4.jpg" />
+    <Content Include="img\portfolio\project-13\thumb-5.jpg" />
+    <Content Include="img\portfolio\project-14\img-1.jpg" />
+    <Content Include="img\portfolio\project-14\img-2.jpg" />
+    <Content Include="img\portfolio\project-14\img-3.jpg" />
+    <Content Include="img\portfolio\project-14\img-4.jpg" />
+    <Content Include="img\portfolio\project-14\img-5.jpg" />
+    <Content Include="img\portfolio\project-14\thumb-1.jpg" />
+    <Content Include="img\portfolio\project-14\thumb-2.jpg" />
+    <Content Include="img\portfolio\project-14\thumb-3.jpg" />
+    <Content Include="img\portfolio\project-14\thumb-4.jpg" />
+    <Content Include="img\portfolio\project-14\thumb-5.jpg" />
+    <Content Include="img\portfolio\project-15\img-1.jpg" />
+    <Content Include="img\portfolio\project-15\img-2.jpg" />
+    <Content Include="img\portfolio\project-15\img-3.jpg" />
+    <Content Include="img\portfolio\project-15\img-4.jpg" />
+    <Content Include="img\portfolio\project-15\img-5.jpg" />
+    <Content Include="img\portfolio\project-15\thumb-1.jpg" />
+    <Content Include="img\portfolio\project-15\thumb-2.jpg" />
+    <Content Include="img\portfolio\project-15\thumb-3.jpg" />
+    <Content Include="img\portfolio\project-15\thumb-4.jpg" />
+    <Content Include="img\portfolio\project-15\thumb-5.jpg" />
+    <Content Include="img\portfolio\project-1\img-1.jpg" />
+    <Content Include="img\portfolio\project-1\img-2.jpg" />
+    <Content Include="img\portfolio\project-1\img-3.jpg" />
+    <Content Include="img\portfolio\project-1\img-4.jpg" />
+    <Content Include="img\portfolio\project-1\img-5.jpg" />
+    <Content Include="img\portfolio\project-1\thumb-1.jpg" />
+    <Content Include="img\portfolio\project-1\thumb-2.jpg" />
+    <Content Include="img\portfolio\project-1\thumb-3.jpg" />
+    <Content Include="img\portfolio\project-1\thumb-4.jpg" />
+    <Content Include="img\portfolio\project-1\thumb-5.jpg" />
+    <Content Include="img\portfolio\project-2\img-1.jpg" />
+    <Content Include="img\portfolio\project-2\img-2.jpg" />
+    <Content Include="img\portfolio\project-2\img-3.jpg" />
+    <Content Include="img\portfolio\project-2\img-4.jpg" />
+    <Content Include="img\portfolio\project-2\img-5.jpg" />
+    <Content Include="img\portfolio\project-2\thumb-1.jpg" />
+    <Content Include="img\portfolio\project-2\thumb-2.jpg" />
+    <Content Include="img\portfolio\project-2\thumb-3.jpg" />
+    <Content Include="img\portfolio\project-2\thumb-4.jpg" />
+    <Content Include="img\portfolio\project-2\thumb-5.jpg" />
+    <Content Include="img\portfolio\project-3\img-1.jpg" />
+    <Content Include="img\portfolio\project-3\img-2.jpg" />
+    <Content Include="img\portfolio\project-3\img-3.jpg" />
+    <Content Include="img\portfolio\project-3\img-4.jpg" />
+    <Content Include="img\portfolio\project-3\img-5.jpg" />
+    <Content Include="img\portfolio\project-3\thumb-1.jpg" />
+    <Content Include="img\portfolio\project-3\thumb-2.jpg" />
+    <Content Include="img\portfolio\project-3\thumb-3.jpg" />
+    <Content Include="img\portfolio\project-3\thumb-4.jpg" />
+    <Content Include="img\portfolio\project-3\thumb-5.jpg" />
+    <Content Include="img\portfolio\project-4\img-1.jpg" />
+    <Content Include="img\portfolio\project-4\img-2.jpg" />
+    <Content Include="img\portfolio\project-4\img-3.jpg" />
+    <Content Include="img\portfolio\project-4\img-4.jpg" />
+    <Content Include="img\portfolio\project-4\img-5.jpg" />
+    <Content Include="img\portfolio\project-4\thumb-1.jpg" />
+    <Content Include="img\portfolio\project-4\thumb-2.jpg" />
+    <Content Include="img\portfolio\project-4\thumb-3.jpg" />
+    <Content Include="img\portfolio\project-4\thumb-4.jpg" />
+    <Content Include="img\portfolio\project-4\thumb-5.jpg" />
+    <Content Include="img\portfolio\project-5\img-1.jpg" />
+    <Content Include="img\portfolio\project-5\img-2.jpg" />
+    <Content Include="img\portfolio\project-5\img-3.jpg" />
+    <Content Include="img\portfolio\project-5\img-4.jpg" />
+    <Content Include="img\portfolio\project-5\img-5.jpg" />
+    <Content Include="img\portfolio\project-5\thumb-1.jpg" />
+    <Content Include="img\portfolio\project-5\thumb-2.jpg" />
+    <Content Include="img\portfolio\project-5\thumb-3.jpg" />
+    <Content Include="img\portfolio\project-5\thumb-4.jpg" />
+    <Content Include="img\portfolio\project-5\thumb-5.jpg" />
+    <Content Include="img\portfolio\project-6\img-1.jpg" />
+    <Content Include="img\portfolio\project-6\img-2.jpg" />
+    <Content Include="img\portfolio\project-6\img-3.jpg" />
+    <Content Include="img\portfolio\project-6\img-4.jpg" />
+    <Content Include="img\portfolio\project-6\img-5.jpg" />
+    <Content Include="img\portfolio\project-6\thumb-1.jpg" />
+    <Content Include="img\portfolio\project-6\thumb-2.jpg" />
+    <Content Include="img\portfolio\project-6\thumb-3.jpg" />
+    <Content Include="img\portfolio\project-6\thumb-4.jpg" />
+    <Content Include="img\portfolio\project-6\thumb-5.jpg" />
+    <Content Include="img\portfolio\project-7\img-1.jpg" />
+    <Content Include="img\portfolio\project-7\img-2.jpg" />
+    <Content Include="img\portfolio\project-7\img-3.jpg" />
+    <Content Include="img\portfolio\project-7\img-4.jpg" />
+    <Content Include="img\portfolio\project-7\img-5.jpg" />
+    <Content Include="img\portfolio\project-7\thumb-1.jpg" />
+    <Content Include="img\portfolio\project-7\thumb-2.jpg" />
+    <Content Include="img\portfolio\project-7\thumb-3.jpg" />
+    <Content Include="img\portfolio\project-7\thumb-4.jpg" />
+    <Content Include="img\portfolio\project-7\thumb-5.jpg" />
+    <Content Include="img\portfolio\project-8\img-1.jpg" />
+    <Content Include="img\portfolio\project-8\img-2.jpg" />
+    <Content Include="img\portfolio\project-8\img-3.jpg" />
+    <Content Include="img\portfolio\project-8\img-4.jpg" />
+    <Content Include="img\portfolio\project-8\img-5.jpg" />
+    <Content Include="img\portfolio\project-8\thumb-1.jpg" />
+    <Content Include="img\portfolio\project-8\thumb-2.jpg" />
+    <Content Include="img\portfolio\project-8\thumb-3.jpg" />
+    <Content Include="img\portfolio\project-8\thumb-4.jpg" />
+    <Content Include="img\portfolio\project-8\thumb-5.jpg" />
+    <Content Include="img\portfolio\project-9\img-1.jpg" />
+    <Content Include="img\portfolio\project-9\img-2.jpg" />
+    <Content Include="img\portfolio\project-9\img-3.jpg" />
+    <Content Include="img\portfolio\project-9\img-4.jpg" />
+    <Content Include="img\portfolio\project-9\img-5.jpg" />
+    <Content Include="img\portfolio\project-9\thumb-1.jpg" />
+    <Content Include="img\portfolio\project-9\thumb-2.jpg" />
+    <Content Include="img\portfolio\project-9\thumb-3.jpg" />
+    <Content Include="img\portfolio\project-9\thumb-4.jpg" />
+    <Content Include="img\portfolio\project-9\thumb-5.jpg" />
+    <Content Include="img\team\1.jpg" />
+    <Content Include="img\team\2.jpg" />
+    <Content Include="img\team\3.jpg" />
+    <Content Include="img\team\4.jpg" />
+    <Content Include="index.html" />
+    <Content Include="js\ajaxchimp.js" />
+    <Content Include="js\classie.js" />
+    <Content Include="js\contact.js" />
+    <Content Include="js\fitvids.js" />
+    <Content Include="js\form.js" />
+    <Content Include="js\local-scroll.js" />
+    <Content Include="js\lte-ie7.js" />
+    <Content Include="js\main.js" />
+    <Content Include="js\nivo-lightbox.js" />
+    <Content Include="js\owl.js" />
+    <Content Include="js\portfolio.js" />
+    <Content Include="js\projects.js" />
+    <Content Include="js\retina.js" />
+    <Content Include="js\scroll-to-top.js" />
+    <Content Include="js\smooth-scroll.js" />
+    <Content Include="js\smoothscroll.min.js" />
+    <Content Include="js\validate.js" />
+    <Content Include="js\vendor\bootstrap.js" />
+    <Content Include="js\vendor\jquery.js" />
+    <Content Include="js\vendor\modernizr-2.6.2-respond-1.1.0.min.js" />
+    <Content Include="js\wow.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2490</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:2490/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
