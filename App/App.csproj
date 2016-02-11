@@ -16,7 +16,7 @@
     <RootNamespace>App</RootNamespace>
     <AssemblyName>App</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -54,6 +54,8 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
@@ -373,9 +375,9 @@
     <Content Include="assets\js\toastr\toastr.min.js" />
     <Content Include="assets\js\validation\bootstrapValidator.js" />
     <Content Include="assets\js\validation\bootstrapValidator.min.js" />
-    <Content Include="assets\sound\alert.mp3" />
     <Content Include="assets\swf\copy_csv_xls.swf" />
     <Content Include="assets\swf\copy_csv_xls_pdf.swf" />
+    <Content Include="blank.html" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -631,7 +633,25 @@
     <Content Include="assets\js\tagsinput\bootstrap-tagsinput.min.js.map" />
     <Content Include="assets\js\toastr\toastr.min.js.map" />
     <Content Include="assets\js\validation\bootstrapValidator.min.js.map" />
+    <EntityDeploy Include="Models\49TonsEntities.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>49TonsEntities.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\49TonsEntities.edmx.diagram">
+      <DependentUpon>49TonsEntities.edmx</DependentUpon>
+    </Content>
+    <Content Include="common.Master" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Models\49TonsEntities.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>49TonsEntities.edmx</DependentUpon>
+      <LastGenOutput>49TonsEntities.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\49TonsEntities.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>49TonsEntities.edmx</DependentUpon>
+      <LastGenOutput>49TonsEntities.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -797,6 +817,13 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="common.Master.cs">
+      <DependentUpon>common.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="common.Master.designer.cs">
+      <DependentUpon>common.Master</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -813,6 +840,24 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\49TonsEntities.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>49TonsEntities.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\49TonsEntities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>49TonsEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\49TonsEntities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>49TonsEntities.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CompanyProfile.cs">
+      <DependentUpon>49TonsEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -843,6 +888,9 @@
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
   </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -858,7 +906,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>2080</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:2080/</IISUrl>
+          <IISUrl>http://localhost/App</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
